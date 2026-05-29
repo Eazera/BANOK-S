@@ -1,0 +1,86 @@
+/*
+ * [banoks_cart_button]
+ */
+
+.banoks-cart-button-shortcode {
+    all: initial;
+    display: inline-block !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 1 !important;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button {
+    all: unset;
+    box-sizing: border-box !important;
+    position: relative;
+    display: inline-grid !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    place-items: center !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: 0 !important;
+    background: #21201e !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button:hover,
+.banoks-cart-button-shortcode .banoks-floating-cart-button:focus {
+    background: #21201e !important;
+    box-shadow: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button svg {
+    display: block !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    fill: #ffffff !important;
+    stroke: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button svg path {
+    fill: #ffffff !important;
+    stroke: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-cart-count {
+    box-sizing: border-box !important;
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    display: none !important;
+    width: auto !important;
+    min-width: 16px !important;
+    height: 16px !important;
+    place-items: center !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    padding: 0 4px !important;
+    background: #ef1010 !important;
+    color: #ffffff !important;
+    font-size: 9px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-cart-count.has-items {
+    display: grid !important;
+}

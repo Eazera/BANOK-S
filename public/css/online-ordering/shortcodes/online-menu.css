@@ -1,0 +1,921 @@
+/*
+ * Online menu and customer orders.
+ * Includes the menu grid and add-to-cart modal styles used by this shortcode.
+ */
+
+.banoks-online-shell {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #21201e;
+    background: #f4f4f4;
+    font-family: Poppins, Arial, sans-serif;
+}
+
+.banoks-online-menu-shell {
+    width: 100%;
+    max-width: none;
+}
+
+.banoks-online-orders-shell {
+    width: 100%;
+    max-width: none;
+}
+
+.banoks-online-shell,
+.banoks-online-shell *,
+.banoks-cart-modal,
+.banoks-cart-modal * {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.banoks-cart-modal,
+.banoks-cart-modal * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.banoks-online-shell button:focus:not(:focus-visible),
+.banoks-online-shell input:focus:not(:focus-visible),
+.banoks-online-shell a:focus:not(:focus-visible),
+.banoks-cart-modal button:focus:not(:focus-visible),
+.banoks-cart-modal input:focus:not(:focus-visible),
+.banoks-cart-modal a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+body:has(.banoks-online-menu-shell) .elementor-element-fb2d267 {
+    --content-width: 100%;
+    --container-max-width: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-menu-shell) .elementor-element-fb2d267 > .e-con-inner {
+    --content-width: 100%;
+    --container-max-width: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-menu-shell) .elementor-widget-shortcode {
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-menu-shell) .elementor-widget-container {
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-orders-shell) .elementor-element-fb2d267 {
+    --content-width: 100%;
+    --container-max-width: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-orders-shell) .elementor-element-fb2d267 > .e-con-inner {
+    --content-width: 100%;
+    --container-max-width: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-orders-shell) .elementor-widget-shortcode {
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-orders-shell) .elementor-widget-container {
+    width: 100%;
+    max-width: none;
+}
+
+.banoks-online-menu {
+    width: 100%;
+}
+
+.banoks-online-menu .banoks-online-layout {
+    grid-template-columns: 1fr;
+}
+
+
+.banoks-menu-title {
+    margin: 8px 0 20px;
+    padding-left: 2px;
+    color: #21201e;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.banoks-menu-category-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    padding: 0 0 2px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.banoks-menu-category-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.banoks-menu-category-btn {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    min-width: 84px;
+    min-height: 34px;
+    border: 1px solid #d7d7d7;
+    border-radius: 999px;
+    padding: 6px 14px;
+    background: #ffffff;
+    color: #21201e;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.banoks-online-panel .banoks-menu-category-btn {
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+}
+
+.banoks-menu-category-btn:hover {
+    border-color: #c9c9c9;
+    background: #ffffff;
+    color: #21201e;
+}
+
+.banoks-menu-category-btn:focus {
+    border-color: #c9c9c9;
+    background: #ffffff;
+    color: #21201e;
+}
+
+.banoks-menu-category-btn.is-active {
+    border-color: #e60913;
+    background: #ffffff;
+    color: #e60913;
+}
+
+.banoks-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.banoks-menu-item {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0;
+    border-radius: 14px;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.14), 0 6px 16px rgba(17, 24, 39, 0.05);
+}
+
+.banoks-menu-empty-search {
+    margin: 18px 0 0;
+    border-radius: 8px;
+    padding: 18px;
+    background: #ffffff;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.banoks-menu-empty-search[hidden] {
+    display: none !important;
+}
+
+.banoks-menu-image {
+    width: 100%;
+    margin: 0 0 5px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.banoks-menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.banoks-menu-copy {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.banoks-menu-copy strong {
+    display: -webkit-box;
+    overflow: hidden;
+    color: #21201e;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.banoks-menu-description {
+    display: block;
+    margin: 0 !important;
+    padding: 0;
+    color: #6b7280;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.35;
+    white-space: normal;
+    overflow: visible;
+}
+
+.banoks-menu-stock {
+    width: fit-content;
+    margin-top: 5px;
+    border-radius: 999px;
+    color: #ef1010;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.banoks-menu-stock.is-low {
+    color: #c2410c;
+    font-weight: 700;
+}
+
+.banoks-menu-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+.banoks-menu-row > span {
+    display: block;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.banoks-menu-row .banoks-menu-qty {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+.banoks-add-cart-btn {
+    width: auto;
+    min-height: 34px;
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: #ef1010;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.banoks-add-cart-btn:hover,
+.banoks-add-cart-btn:focus {
+    background: #ef1010;
+    color: #ffffff;
+}
+
+.banoks-menu-panel{
+    width: auto;
+    padding: 0px;
+    border: 0;
+    background: transparent;
+    line-height: 1.1;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+.banoks-order-list {
+    display: grid;
+    gap: 12px;
+}
+
+.banoks-order-card {
+    display: grid;
+    gap: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px;
+    background: #ffffff;
+}
+
+.banoks-status {
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 999px;
+    padding: 4px 10px;
+    background: #f3f4f6;
+    font-weight: 800;
+}
+
+
+@media (max-width: 1024px) {
+    .banoks-menu-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .banoks-menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .banoks-menu-item {
+        padding: 9px;
+        border-radius: 12px;
+    }
+
+    .banoks-menu-copy strong {
+        font-size: 12px;
+    }
+
+    .banoks-menu-description {
+        font-size: 10px;
+    }
+
+    .banoks-menu-row > span {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 563px) {
+    .banoks-menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .banoks-menu-item {
+        padding: 8px;
+    }
+
+    .banoks-menu-copy strong {
+        font-size: 12px;
+    }
+
+    .banoks-menu-description {
+        font-size: 9px;
+    }
+
+    .banoks-menu-stock {
+        font-size: 8px;
+    }
+
+    .banoks-menu-row > span {
+        font-size: 12px;
+    }
+
+    .banoks-add-cart-btn {
+        width: auto;
+        min-height: 25px;
+        padding: 7px 8px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .banoks-menu-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 10px;
+    }
+        .banoks-menu-item {
+        padding: 9px;
+        border-radius: 12px;
+    }
+
+    .banoks-menu-copy strong {
+        font-size: 12px;
+    }
+
+    .banoks-menu-description {
+        font-size: 10px;
+    }
+
+    .banoks-menu-row > span {
+        font-size: 13px;
+    }
+}
+
+
+.banoks-cart-button-shortcode {
+    all: initial;
+    display: inline-block !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 1 !important;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button {
+    all: unset;
+    box-sizing: border-box !important;
+    position: relative;
+    display: inline-grid !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    place-items: center !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: 0 !important;
+    background: #21201e !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button:hover {
+    background: #21201e !important;
+    box-shadow: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button:focus {
+    background: #21201e !important;
+    box-shadow: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button svg {
+    display: block !important;
+    width: 30px !important;
+    height: 30px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    fill: #ffffff !important;
+    stroke: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-floating-cart-button svg path {
+    fill: #ffffff !important;
+    stroke: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-cart-count {
+    box-sizing: border-box !important;
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    display: none !important;
+    width: auto !important;
+    min-width: 16px !important;
+    height: 16px !important;
+    place-items: center !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    padding: 0 4px !important;
+    background: #ef1010 !important;
+    color: #ffffff !important;
+    font-size: 9px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.banoks-cart-button-shortcode .banoks-cart-count.has-items {
+    display: grid !important;
+}
+
+.banoks-view-cart-shortcode {
+    display: block;
+    width: 100%;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.banoks-view-cart-button {
+    box-sizing: border-box;
+    display: grid;
+    width: var(--banoks-view-cart-width, min(100%, 560px));
+    max-width: var(--banoks-view-cart-max-width, none);
+    min-height: var(--banoks-view-cart-height, 48px);
+    grid-template-columns: var(--banoks-view-cart-count-size, 30px) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--banoks-view-cart-gap, 14px);
+    margin: var(--banoks-view-cart-margin, 0);
+    border: 0;
+    border-radius: 999px;
+    padding: var(--banoks-view-cart-padding, 4px 22px 4px 16px);
+    background: #ef1010;
+    color: #ffffff;
+    box-shadow: none;
+    cursor: pointer;
+    font: inherit;
+    text-decoration: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.banoks-view-cart-button[hidden] {
+    display: none !important;
+}
+
+.banoks-view-cart-button:hover {
+    background: #ef1010;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banoks-view-cart-button:focus {
+    background: #ef1010;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banoks-view-cart-count {
+    box-sizing: border-box;
+    display: grid;
+    width: var(--banoks-view-cart-count-size, 30px);
+    height: var(--banoks-view-cart-count-size, 30px);
+    place-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.banoks-view-cart-label {
+    min-width: 0;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: var(--banoks-view-cart-font-size, 13px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.banoks-view-cart-total {
+    color: #ffffff;
+    font-size: var(--banoks-view-cart-font-size, 13px);
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.banoks-cart-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    padding: 18px;
+    background: rgba(15, 23, 42, 0.48);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.banoks-cart-modal.is-open {
+    display: flex;
+    animation: banoks-cart-modal-fade-in 180ms ease-out;
+}
+
+.banoks-cart-dialog {
+    position: relative;
+    width: min(100%, 460px);
+    max-height: min(720px, 92vh);
+    overflow-y: auto;
+    border-radius: 22px;
+    background: #fff;
+    padding: 22px;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.28);
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.banoks-cart-modal.is-open .banoks-cart-dialog {
+    animation: banoks-cart-dialog-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes banoks-cart-modal-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes banoks-cart-dialog-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banoks-cart-modal.is-open,
+    .banoks-cart-modal.is-open .banoks-cart-dialog {
+        animation: none;
+    }
+}
+
+.banoks-cart-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #111827;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0 0 2px;
+}
+
+.banoks-cart-modal-product {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding-right: 34px;
+}
+
+.banoks-cart-modal-image {
+    aspect-ratio: 1;
+    border-radius: 16px;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.banoks-cart-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banoks-cart-modal-product h3 {
+    margin: 0 0 5px;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #111827;
+}
+
+.banoks-cart-modal-product p {
+    margin: 0;
+    color: #ef1010;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.banoks-cart-quantity-control {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.banoks-cart-quantity-control > span,
+.banoks-cart-addons h4 {
+    color: #111827;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.banoks-cart-quantity-control > div {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.banoks-cart-qty-btn {
+    color: #111827;
+    width: 28px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    line-height: 1;
+    padding: 1px 0 0;
+}
+
+#banoks-cart-modal-qty {
+    border: none;
+    width: 20px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.banoks-cart-addons {
+    margin-top: 22px;
+}
+
+.banoks-cart-addons h4 {
+    margin: 0 0 10px;
+}
+
+.banoks-cart-addon-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    padding: 10px 12px;
+    background: #f9fafb;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.banoks-cart-addon-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #ef1010;
+}
+
+.banoks-cart-addon-option span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.banoks-cart-addon-option small {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.banoks-cart-addon-option.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.72;
+}
+
+.banoks-cart-addon-option.is-disabled input {
+    cursor: not-allowed;
+}
+
+.banoks-cart-addon-option.is-disabled span,
+.banoks-cart-addon-option.is-disabled small {
+    color: #ef1010;
+}
+
+.banoks-cart-no-addons {
+    margin: 0;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.banoks-cart-confirm-btn {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 999px;
+    background: #ef1010;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.banoks-cart-confirm-btn:focus,
+.banoks-cart-confirm-btn:focus-visible,
+.banoks-cart-confirm-btn:active {
+    outline: none;
+    background: #ef1010;
+    box-shadow: 0 0 0 3px rgba(239, 16, 16, 0.25);
+    color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.banoks-modal-qty-control{
+    background: #1f1e1e;
+}
+
+.banoks-cart-modal .banoks-cart-qty-btn,
+.banoks-cart-modal .banoks-cart-qty-btn:hover,
+.banoks-cart-modal .banoks-cart-qty-btn:focus,
+.banoks-cart-modal .banoks-cart-qty-btn:active {
+    background: #ffffff;
+    border-color: transparent;
+    color: #21201e;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: none;
+    transform: none;
+}
+
+ .banoks-cart-quantity-control > div{
+    background: #ffffff;
+    border-radius: 999px;
+    border: 1px solid #bcbcbd;
+    box-shadow: none;
+}
+
+.banoks-cart-modal #banoks-cart-modal-qty,
+.banoks-cart-modal #banoks-cart-modal-qty:hover,
+.banoks-cart-modal #banoks-cart-modal-qty:focus,
+.banoks-cart-modal #banoks-cart-modal-qty:active {
+    background: #ffffff;
+    color: #21201e;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: textfield;
+    -webkit-appearance: none;
+    pointer-events: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.banoks-cart-modal-close,
+.banoks-cart-modal-close:hover,
+.banoks-cart-modal-close:focus,
+.banoks-cart-modal-close:active {
+    background: transparent;
+    background-image: none;
+    border-color: transparent;
+    color: #21201e;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.banoks-cart-modal-close:hover,
+.banoks-cart-modal-close:focus {
+    color: #e60913;
+}
