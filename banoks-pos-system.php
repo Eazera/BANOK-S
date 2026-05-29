@@ -11,14 +11,14 @@
  * @package           Banoks_POS
  *
  * @wordpress-plugin
- * Plugin Name:       Banoks POS System
+ * Plugin Name:       BANOK'S SYSTEM
  * Plugin URI:        https://Eazera.ph
  * Description:       Customized plugin POS system developed by Eazera Team.
  * Version:           1.7.5
  * Author:            Eazera
  * Author URI:        https://Eazera.ph
  * License:           GPL-2.0+
- * Text Domain:       banoks-pos
+ * Text Domain:       banoks-system
  * Domain Path:       /languages
  */
 
