@@ -1,0 +1,86 @@
+/*
+ * [banoks_my_orders]
+ */
+
+.banoks-online-orders-shell {
+    width: 100%;
+    max-width: none;
+}
+
+body:has(.banoks-online-orders-shell) .elementor-element-fb2d267,
+body:has(.banoks-online-orders-shell) .elementor-element-fb2d267 > .e-con-inner,
+body:has(.banoks-online-orders-shell) .elementor-widget-shortcode,
+body:has(.banoks-online-orders-shell) .elementor-widget-container {
+    --content-width: 100%;
+    --container-max-width: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+.banoks-order-list {
+    display: grid;
+    gap: 12px;
+}
+
+.banoks-order-card {
+    display: grid;
+    gap: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px;
+    background: #ffffff;
+}
+
+.banoks-status {
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 999px;
+    padding: 4px 10px;
+    background: #f3f4f6;
+    font-weight: 800;
+}
+
+.banoks-order-terminal-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.banoks-order-terminal-status span {
+    display: grid;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    place-items: center;
+}
+
+.banoks-order-terminal-status svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.banoks-order-terminal-status.is-completed {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.banoks-order-terminal-status.is-completed span {
+    background: #d1fae5;
+}
+
+.banoks-order-terminal-status.is-cancelled {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.banoks-order-terminal-status.is-cancelled span {
+    background: #fee2e2;
+}

@@ -1,0 +1,64 @@
+/*
+ * [banoks_customer_address]
+ */
+
+.banoks-customer-address {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    max-width: 100%;
+    color: #fff !important;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.banoks-customer-address-text {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    color: inherit !important;
+    line-height: 1.15;
+}
+
+.banoks-customer-address-heading,
+.banoks-customer-address-subheading {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.banoks-customer-address-heading {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.banoks-customer-address-subheading {
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.banoks-customer-address-icon {
+    display: inline-grid;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    color: #fff;
+    place-items: center;
+}
+
+.banoks-customer-address-icon svg,
+.banoks-customer-address-icon img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+}

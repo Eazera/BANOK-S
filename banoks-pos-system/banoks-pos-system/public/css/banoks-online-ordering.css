@@ -1,0 +1,18 @@
+/*
+ * Banoks online ordering stylesheet manifest.
+ * Purpose-specific CSS lives in public/css/online-ordering/.
+ * Keep this import order because later files intentionally override earlier rules.
+ */
+@import url("online-ordering/00-preloader-skeleton.css");
+@import url("online-ordering/shortcodes/shared.css");
+@import url("online-ordering/shortcodes/customer-auth.css");
+@import url("online-ordering/shortcodes/customer-login-button.css");
+@import url("online-ordering/shortcodes/customer-address.css");
+@import url("online-ordering/shortcodes/theme-header.css");
+@import url("online-ordering/shortcodes/online-menu.css");
+@import url("online-ordering/shortcodes/cart.css");
+@import url("online-ordering/shortcodes/cart-button.css");
+@import url("online-ordering/shortcodes/view-cart-button.css");
+@import url("online-ordering/shortcodes/my-orders.css");
+@import url("online-ordering/shortcodes/me.css");
+@import url("online-ordering/shortcodes/theme-footer.css");
