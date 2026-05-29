@@ -1,4 +1,4 @@
-- v1.6.7: Removed red background from add-to-cart modal X close button and set [banoks_view_cart_button] default URL to https://banoks.ph/cart.
+- v1.6.8: Removed red background from add-to-cart modal X close button and set [banoks_view_cart_button] default URL to https://banoks.ph/cart.
 - v1.6.7: Removed red hover/active background from the add-to-cart modal quantity controller.
 - v1.6.7: Added stronger Elementor/theme hover reset for [banoks_cart_button] so hover background stays transparent and only the icon changes color.
 - v1.6.7: Forced [banoks_cart_button] hover background to stay transparent; only the icon turns red on hover.
